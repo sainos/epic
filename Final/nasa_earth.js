@@ -105,9 +105,9 @@ $(document).ready(function() {
       var str = "<div class='col-sm-3 image-cell'><div class='nasa-image'><img src =" + '"' + images[j].img_url + '"' + "></div><div class='image-caption'></div><div class='image-coords'></div></div>";
       var capt = images[j].img_date;
       var coords = images[j].cent_coor;
-      $('div.well').append(str);
-      $('div.image-caption').append(capt);
-      $('div.image-coords').append(coords);
+      $('div.well:last').append(str);
+      $('div.image-caption:last').append(capt);
+      $('div.image-coords:last').append(coords);
     }
 
     // render all images in an iterative loop here!
@@ -120,6 +120,10 @@ $(document).ready(function() {
   function render_highres(src_url) {
     // use jQuery to select and maniupate the portion of the DOM => #image-grid
     //  to insert your high resolution image
+
+    $("div").on("click", "img", function(){
+    // render your high resolution image within the #image-grid id html element
+    });
   }
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ========================================================
