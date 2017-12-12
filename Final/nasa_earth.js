@@ -50,6 +50,7 @@ $(document).ready(function() {
 
     // build the search url and sling it into the URL request HTML element
      var search_url = "https://epic.gsfc.nasa.gov/api/natural/date/" + info.year + "-" + info.month + "-" + info.day + "?api_key=" + info.api_key;
+     $('#reqURL').append(search_url);
      console.log(search_url);
     // sling it!
 
